@@ -1,0 +1,25 @@
+	ORG 8000h
+	
+	note_count	dw 2
+	
+note_1_header:
+	.note_ptr	dw note_1
+	.note_size	dw 10
+	.year		dw 1980
+	.monthday	dw 1 + 1 * 256 
+	.hourmin	dw 9 + 14 * 256 
+	
+note_2_header:
+	.note_ptr	dw note_2
+	.note_size	dw 12
+	.year		dw 2019
+	.monthday	dw 6 + 30 * 256 
+	.hourmin	dw 8 + 57 * 256 
+	
+note_1:
+	.title		db 'Test!', 0
+	.data		db '123', 0
+	
+note_2:
+	.title		db 'Test 2!', 0
+	.data		db '456', 0
