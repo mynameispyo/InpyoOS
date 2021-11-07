@@ -1,5 +1,5 @@
 	BITS 16
-	%INCLUDE "michalos.inc"
+	%INCLUDE "osdev.inc"
 	ORG 100h
 
 	disk_buffer	equ	16384

@@ -1,6 +1,6 @@
 BITS 16
 ORG 100h
-%INCLUDE "michalos.inc"
+%INCLUDE "osdev.inc"
 
 start:
 	call .draw_background

@@ -12,7 +12,7 @@
 ; (where X is a USB flash drive that you wish to overwrite)
 ; ------------------------------------------------------------------
 
-        %include "michalos.inc"
+        %include "osdev.inc"
         bits    16
         org     100h
 

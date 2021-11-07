@@ -38,7 +38,7 @@ start:
 	mov ax, .sys_already_started
 	mov bx, 0
 	
-	cmp byte [fs:8000h], 0	; Check if MICHALOS.SYS is already loaded
+	cmp byte [fs:8000h], 0	; Check if INPYOOS.SYS is already loaded
 	jne .catastrophic_failure
 	
 	mov si, .load_msg1
@@ -204,7 +204,7 @@ start:
 	.flatdesc				db 0xff, 0xff, 0, 0, 0, 10010010b, 11001111b, 0
 	.gdt_end:
 	
-	.system_name			db 'MICHALOS.SYS', 0
+	.system_name			db 'INPYOOS.SYS', 0
 	.load_sgmt				dw 1000h
 	
 	.load_msg1				db 'InpyoOS is starting up...', 13, 10, 10
@@ -228,7 +228,7 @@ start:
 	.unreal_msg3			db 'Switching to protected mode...', 13, 10, 0
 	.unreal_msg4			db 'We', 39, 're in unreal mode!', 13, 10, 0
 	
-	.boot_msg1				db 'Preparing for jumping to MICHALOS.SYS...', 13, 10, 0
+	.boot_msg1				db 'Preparing for jumping to INPYOOS.SYS...', 13, 10, 0
 	
 	.fail_msg1				db ' fail.', 13, 10, 0
 	.fail_msg2				db 'Expected ', 0

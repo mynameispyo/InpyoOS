@@ -5,7 +5,7 @@
 A2		equ 110
 AS2		equ 117
 B2		equ 124
-C3		equ 131
+C3		equ 131 ;도
 CS3		equ 139
 D3		equ 147
 DS3		equ 156
@@ -17,19 +17,19 @@ GS3		equ 208
 A3		equ 220
 AS3		equ 233
 B3		equ 247
-C4		equ 262
+C4		equ 262 ;도 
 CS4		equ 277
-D4		equ 294
+D4		equ 294 ;레
 DS4		equ 311
-E4		equ 330
-F4		equ 349
+E4		equ 330 ;미
+F4		equ 349 ;파
 FS4		equ 370
-G4		equ 392
+G4		equ 392 ;솔
 GS4		equ 415
-A4		equ 440
+A4		equ 440 ;라
 AS4		equ 466
-B4		equ 494
-C5		equ 523
+B4		equ 494 ;시
+C5		equ 523 ; 높은 도
 CS5		equ 554
 D5		equ 587
 DS5		equ 622

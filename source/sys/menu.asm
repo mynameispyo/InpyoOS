@@ -24,14 +24,14 @@ logout:				db 1
 shutdown:			db 2
 
 	menuoptions				db 'Programs,Games,Log out,Shut down', 0
-	gameoptions				db 'Cosmic Flight,InkSpill,Space Inventors,aSMtris,Sudoku,Deep Sea Fisher,MikeTron,Muncher,Hangman,Snake', 0
+	gameoptions				db 'Cosmic Flight,InkSpill,Space Inventors,aSMtris,Sudoku,Deep Sea Fisher,MikeTron,Muncher,Hangman,Snake,2048', 0
 	debugoptions			db 'Disk Detection Test,Keyboard Tester,Serial Communication Tester,RTC Clock Tester,Disk Sector Inspector,Memory Editor,Boxes,Dots,Mouse Tester,VESA Tester', 0
 	appoptions				db 'File Manager,Text Editor,Image Viewer,Calculator,Clock,Terminal,Settings,ASCII art editor,Pixel art editor,Music player,Hardware checker,About InpyoOS,Debug tools', 0
 
 	menuindex				dw appmenu, gamemenu, logout, shutdown
 	appindex				dw edit_name, viewer_name, calc_name, clock_name, cmd_name, config_name, ascii_name, pixel_name, player_name, hwcheck_name, about_name, debugmenu
 	debugindex				dw debug1_name, debug2_name, debug3_name, debug4_name, debug5_name, debug6_name, debug7_name, debug8_name, debug9_name, debug10_name
-	gameindex				dw cf_name, inkspill_name, spaceinv_name, asmtris_name, sudoku_name, fisher_name, miketron_name, muncher_name, hangman_name, snake_name
+	gameindex				dw cf_name, inkspill_name, spaceinv_name, asmtris_name, sudoku_name, fisher_name, miketron_name, muncher_name, hangman_name, snake_name, 2048_name
 	
 	edit_name				db 'EDIT.APP', 0
 	viewer_name				db 'VIEWER.APP', 0
@@ -66,3 +66,4 @@ shutdown:			db 2
 	muncher_name			db 'MUNCHER.BAS', 0
 	hangman_name			db 'HANGMAN.APP', 0
 	snake_name				db 'SNAKE.APP', 0
+	2048_name				db '2048.APP', 0

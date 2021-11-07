@@ -4,7 +4,7 @@
 
 	BITS 16
 	ORG 100h
-	%INCLUDE "michalos.inc"
+	%INCLUDE "osdev.inc"
 
 os_demotour:
 	mov si, .test_data_bgcolor

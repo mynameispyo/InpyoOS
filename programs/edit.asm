@@ -4,7 +4,7 @@
 
 
 	BITS 16
-	%INCLUDE "michalos.inc"
+	%INCLUDE "osdev.inc"
 	ORG 100h
 
 

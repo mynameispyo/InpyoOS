@@ -9,7 +9,7 @@
 ;	note_data	times X db note_title, 0, note_body, 0
 
 	BITS 16
-	%INCLUDE "michalos.inc"
+	%INCLUDE "osdev.inc"
 	ORG 100h
 
 start:

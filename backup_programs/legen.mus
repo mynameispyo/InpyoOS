@@ -1,0 +1,29 @@
+; MichalOS Music Format File
+
+	%INCLUDE "notelist.txt"
+
+start:
+	.pit_data	dw 0
+	.song_delay	db 2
+	;				0	1	2	3	4	5	6	7	8	9	A	B	C	D	E	F
+	;.track00 dw		0,  0,  B3, 0,  B3, 0,  A3, 0, 	A3, 0,  B3, 0,  B3, 0,  A3, 0
+	;.track01 dw		0,  0,  B3, 0,  B3, 0,  A3, 0, 	A3, 0,  B3, 0,  B3, 0,  C4, 0
+	;.track02 dw		0,  0,  C4, 0,  C4, 0,  B3, 0,  B3, 0,  C4, 0,  C4, 0,  B3, 0
+	;.track03 dw		0,  0,  C4, 0,  C4, 0,  B3, 0,  B3, 0,  C4, 0,  C4, 0,  A3, 0
+	;.track04 dw		D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4
+	;.track05 dw		G3, 0,  A3, 0,  B3, 0,  C4, 0,  D4, D4, D4, D4, D4, 0,  B3, 0
+	;.track06 dw		D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4, D4
+	;.track07 dw		F4, F4, F4, F4, 0,  E4, 0,  D4, 0,  C4, C4, C4, C4, C4, C4, C4
+
+	.track08 dw		D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5
+	.track09 dw		G5, G5, G5, G5, G5, G5, A5, A5, B5, B5, B5, B5, D6, D6, D6, D6
+
+	.track0a dw 	0,  D6, D6, D6, C6, C6, C6, C6, C6, C6, C6, C6, 0,  C6, B5, B5
+	.track0b dw		A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, F5, F5, E5, E5 
+	.track0c dw 	D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5, D5
+	.track0d dw		D4, D4, E4, E4, F4, F4, G4, G4, A4, A4, A4, A4, A4, A4, F4, F4
+	.track0e dw		A4, A4, A4, A4, A4, A4, A4, A4, A4, A4, A4, A4, A4, A4, A4, A4
+	.track0f dw		
+	
+	
+	.end		dw 0, 1

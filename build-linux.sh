@@ -17,7 +17,7 @@ nasm -O0 -w+orphan-labels -f bin -o source/bootload/bootload.bin source/bootload
 echo ">>> Assembling InpyoOS kernel..."
 
 cd source
-nasm -O0 -w+orphan-labels -f bin -o michalos.sys system.asm || exit
+nasm -O0 -w+orphan-labels -f bin -o inpyoos.sys system.asm || exit
 
 echo ">>> Assembling InpyoOS 2nd-stage bootloader..."
 
@@ -40,9 +40,20 @@ echo ">>> Assembling programs..."
 
 for i in *.asm
 do
-	nasm -O0 -w+orphan-labels -f bin $i -o `basename $i .asm`.app || exit
+	nasm -O0 -w+orphan-labels -f bin $i -o ../programs-out/`basename $i .asm`.app || exit
 done
 
+cd ..
+
+cd cprograms
+# get folders in cprograms
+for i in *
+do 
+	cd $i
+	make || exit
+	mv $i.app ../../programs-out/
+	cd ..
+done
 cd ..
 
 echo ">>> Adding bootloader to floppy image..."
@@ -57,8 +68,8 @@ mkdir tmp-loop
 mount -t vfat disk_images/inpyoos.flp tmp-loop
 
 cp source/boot.sys tmp-loop/
-cp source/michalos.sys tmp-loop/
-cp programs/*.app programs/*.bas programs/*.dat tmp-loop/
+cp source/inpyoos.sys tmp-loop/
+cp programs-out/*.app programs/*.bas programs/*.dat tmp-loop/
 cp example_content/*.asc example_content/*.pcx example_content/*.mmf example_content/*.dro example_content/*.rad tmp-loop/
 cp source/sys/*.sys tmp-loop/
 

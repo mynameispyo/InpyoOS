@@ -37,7 +37,7 @@
 
 
         bits 16
-        %include "michalos.inc" ;MikeOS Include file
+        %include "osdev.inc" ;MikeOS Include file
         org 100h              ;MikeOS program area
 
 start:  mov byte [0082h], 1

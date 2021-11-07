@@ -36,7 +36,7 @@
     ; COM programs are required to have their origin at CS:0100h
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     org 100h
-    %include "michalos.inc"
+    %include "osdev.inc"
     %include "../example_content/notelist.txt"
     
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

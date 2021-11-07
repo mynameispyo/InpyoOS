@@ -1,3 +1,8 @@
 disk_images/
 tmp-loop/
 programs/*.app
+programs-out/*
+libmikeos/**/*.o
+libmikeos/**/*.bin
+libmikeos/**/*.a
+cprograms/**/*.o

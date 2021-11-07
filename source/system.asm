@@ -6,12 +6,12 @@
 	disk_buffer 	equ	0E000h
 	
 ; ------------------------------------------------------------------
-; MichalOS memory map:
+; InpyoOS memory map:
 ; Segment 0000h:
 ;   - 0000h - 03FFh = Interrupt vector table
 ;   - 0400h - 04FFh = BIOS data area
 ;   - 1000h - 1FFFh = Video Software Renderer memory
-;   - 4000h - 4FFFh = MichalOS Bootloader (BOOT.SYS)
+;   - 4000h - 4FFFh = InpyoOS Bootloader (BOOT.SYS)
 ;   - 7000h - 70FFh = VESA palette table (VESA.SYS)
 ;   - 7100h - 7FFFh = Desktop background (BG.ASC)
 ;   - 8000h - 8FFFh = System font (FONT.SYS)
@@ -49,7 +49,7 @@
 ;      - 0 = return to the desktop after an application quits
 ;      - 1 = launch another application (filename passed in AX) after an application quits
 ;         - Note: after launching another application this flag is set to 0
-;   - 8000h - DEA7h = MichalOS kernel
+;   - 8000h - DEA7h = InpyoOS kernel
 ;   - DEA8h - DFFFh = Configuration file (SYSTEM.CFG)
 ;      - described in CONFIG.ASM
 ;   - E000h - FFFFh = Disk buffer
@@ -711,7 +711,7 @@ systemfilemissing:
 
 	appindex1				dw edit_name, viewer_name, calc_name, clock_name, cmd_name, config_name, ascii_name, pixel_name, player_name, hwcheck_name, about_name
 	debugindex1				dw debug1_name, debug2_name, debug3_name, debug4_name, debug5_name, debug6_name, debug7_name, debug8_name, debug9_name, debug10_name
-	gameindex1				dw cf_name, inkspill_name, spaceinv_name, asmtris_name, sudoku_name, fisher_name, miketron_name, muncher_name, hangman_name, snake_name
+	gameindex1				dw cf_name, inkspill_name, spaceinv_name, asmtris_name, sudoku_name, fisher_name, miketron_name, pong_name, hangman_name, snake_name, n2048_name
 	
 	edit_name				db 'EDIT', 0
 	viewer_name				db 'VIEWER', 0
@@ -743,9 +743,10 @@ systemfilemissing:
 	sudoku_name				db 'SUDOKU.APP', 0
 	fisher_name				db 'FISHER.APP', 0
 	miketron_name			db 'MIKETRON.BAS', 0
-	muncher_name			db 'MUNCHER.BAS', 0
+	pong_name				db 'PONG.APP', 0
 	hangman_name			db 'HANGMAN.APP', 0
 	snake_name				db 'SNAKE.APP', 0
+	n2048_name				db '2048.APP', 0
 	
 	app_prefix				db '.'
 	app_ext					db 'APP', 0
@@ -754,14 +755,14 @@ systemfilemissing:
 	fileman_name			db 'FILEMAN.APP', 0
 	demotour_name			db 'DEMOTOUR.APP', 0
 	system_cfg				db 'SYSTEM.CFG', 0
-	system_name				db 'MICHALOS.SYS', 0
+	system_name				db 'INPYOOS.SYS', 0
 
 	basic_finished_msg		db 'BASIC program ended', 0
 
 	empty_string			db 0
 	
 	menuoptions				db 'Programs,Games,Log out,Shut down', 0
-	gameoptions				db 'Cosmic Flight,InkSpill,Space Inventors,aSMtris,Sudoku,Deep Sea Fisher,MikeTron,Muncher,Hangman,Snake', 0
+	gameoptions				db 'Cosmic Flight,InkSpill,Space Inventors,aSMtris,Sudoku,Deep Sea Fisher,MikeTron,Pong,Hangman,Snake,2048', 0
 	debugoptions			db 'Disk Detection Test,Keyboard Tester,Serial Communication Tester,RTC Clock Tester,Disk Sector Inspector,Memory Editor,Boxes,Dots,Mouse Tester,VESA Tester', 0
 	progoptions				db 'File Manager,Text Editor,Image Viewer,Calculator,Clock,Terminal,Settings,ASCII art editor,Pixel art editor,Music player,Hardware checker,About InpyoOS,Debug tools', 0
 	

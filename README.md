@@ -19,9 +19,9 @@ Building the OS
 
 Linux:
 	- Required packages: "nasm", "dosfstools", "qemu"
-	- To build: open the terminal, navigate to the directory that contains MichalOS and type:
+	- To build: open the terminal, navigate to the directory that contains InpyoOS and type:
 		sudo ./build-linux
-	- If you prefer a cleaner MichalOS build (without example images and "music"), type:
+	- If you prefer a cleaner InpyoOS build (without example images and "music"), type:
 		sudo ./build-linux-clean
 	(note: both of the commands listed above will ask for your password)
 	- If you just want to boot the image without rebuilding, type:

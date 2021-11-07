@@ -1,6 +1,6 @@
 BITS 16
 ORG 4000h
-%include "michalos.inc"
+%include "osdev.inc"
 
 start:
 	mov ax, 32768-1024
