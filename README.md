@@ -3,6 +3,8 @@ InpyoOS
 
 https://www.youtube.com/watch?v=Q5CfhwSJ7QQ
 
+https://www.youtube.com/watch?v=ffOEPdVN2KU
+
 A 32-bit operating system based on MichalOS,
 aimed to make it more advanced on the inside,
 but simple and easy to use on the outside.
